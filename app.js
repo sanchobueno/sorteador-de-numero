@@ -2,7 +2,12 @@ function sortear(){
     let quantidade = parseInt(document.getElementById("quantidade").value);
     let de = parseInt(document.getElementById("de").value);
     let ate = parseInt(document.getElementById("ate").value);
-    
+
+    if (quantidade > (ate - de + 1)){
+        alert("Intervalo insuficiente para a quantidade de números solicitada. Ou numero \"de\" é maior que o numero \"ate\".");
+        return;
+    }
+
     let sorteio = [];
     let numero;
     for(let i = 0; i < quantidade; i++){
